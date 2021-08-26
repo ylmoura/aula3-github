@@ -1,7 +1,7 @@
 package application;
 
-import java.awt.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -13,7 +13,8 @@ public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		List<Employee> List = new ArrayList<>();
+		
+		List<Employee> list = new ArrayList<>();
 		
 		System.out.println("Enter the number of employee: ");
 		int n = sc.nextInt();
@@ -26,14 +27,14 @@ public class Program {
 			sc.nextLine(); //consumir a quebra de linha
 			String name = sc.nextLine();
 			System.out.println("Hours: ");
-			double hours = sc.nextDouble();
+			int hours = sc.nextInt();
 			System.out.print("Value per Hour: ");
 			double valuePerHour = sc.nextDouble();
 			
 			if (ch == 'y') {
 				System.out.print("Additional charge: ");
 				double additionalCharge = sc.nextDouble();
-				list.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
+				list.add(new OutsourcedEmployee(name,hours, valuePerHour, additionalCharge));
 			}
 			else {
 				list.add(new Employee(name, hours, valuePerHour));
