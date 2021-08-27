@@ -21,7 +21,7 @@ public class Program {
 		
 		for (int i=1;i<=n;i++) {
 			System.out.println("Employee #"+ i + "Data");
-			System.out.printf("Outsorced(y/d)?");
+			System.out.printf("Outsorced(y/n)?");
 			char ch = sc.next().charAt(0);
 			System.out.print("Name");
 			sc.nextLine(); //consumir a quebra de linha
